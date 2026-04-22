@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Породы кошек</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+      overflow: hidden;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 18px 20px;
+      font-size: 24px;
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      vertical-align: top;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    th {
+      background: #eef2ff;
+      font-size: 15px;
+    }
+
+    .breed-name {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    tr.active-row {
+      background: #f0f9ff;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 10px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Сравнение пород кошек</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Порода кошки</th>
+          <th>Индивидуальный уход и питание</th>
+          <th>Дети, аллергия, агрессивность</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="breed-name">Британская короткошерстная</span>
+          </td>
+          <td>
+            Расчесывать 1-2 раза в неделю. Следить за весом, порода склонна к набору массы.
+            Питание: качественный белок, умеренная калорийность, чистая вода постоянно.
+          </td>
+          <td>
+            К детям: спокойная, терпеливая.<br>
+            Аллергия: средний уровень аллергенности.<br>
+            Агрессивность: низкая.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="breed-name">Мейн-кун</span>
+          </td>
+          <td>
+            Длинную шерсть вычесывать 2-3 раза в неделю. Нужны когтеточка и активные игры.
+            Питание: рацион для крупных пород, контроль суставов и веса.
+          </td>
+          <td>
+            К детям: обычно дружелюбная и игривая.<br>
+            Аллергия: выше средней из-за густой шерсти.<br>
+            Агрессивность: низкая при правильной социализации.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="breed-name">Сфинкс</span>
+          </td>
+          <td>
+            Купать примерно раз в 1-2 недели, регулярно очищать уши и кожу.
+            Питание: более калорийное, так как тратят больше энергии на теплообмен.
+          </td>
+          <td>
+            К детям: контактная, ласковая.<br>
+            Аллергия: может подходить лучше, но не гипоаллергенна полностью.<br>
+            Агрессивность: очень низкая.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="breed-name">Сиамская</span>
+          </td>
+          <td>
+            Короткая шерсть почти не требует сложного ухода, важно много общения и игр.
+            Питание: сбалансированный рацион с контролем порций и белка.
+          </td>
+          <td>
+            К детям: хорошо относится при уважительном обращении.<br>
+            Аллергия: средняя.<br>
+            Агрессивность: средняя, если кошке не хватает внимания.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    const rows = document.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+      row.addEventListener("click", () => {
+        rows.forEach((item) => item.classList.remove("active-row"));
+        row.classList.add("active-row");
+      });
+    });
+  </script>
+</body>
+</html>
